@@ -53,12 +53,14 @@ const generateGalaxy = () => {
     const radius = Math.random() * parameters.radius
     const branchAngle =
       ((i % parameters.branches) / parameters.branches) * Math.PI * 2
-    const spinAngle = radius * parameters.spin //spin depending on the distance the furrther from center the more spin
+    const spinAngle = radius * parameters.spin //spin depending on the distance the further from center the more spin
 
     // const randomX = (Math.random() - 0.5) * parameters.randomness
     // const randomY = (Math.random() - 0.5) * parameters.randomness
     // const randomZ = (Math.random() - 0.5) * parameters.randomness
-
+    if (i < 20) {
+      console.log(branchAngle)
+    }
     const randomX =
       Math.pow(Math.random(), parameters.randomnessPower) *
       (Math.random() < 0.5 ? 1 : -1)
